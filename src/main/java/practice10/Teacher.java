@@ -36,7 +36,15 @@ public class Teacher extends Person{
     @Override
     public String introduce() {
         if(classes.size() > 0) {
-            return super.introduce() + " I am a Teacher. I teach Class " + classNumList.toString() + ".";
+            String classStr = "";
+            for(int i = 0; i < classNumList.size(); i++) {
+                if(i != classNumList.size()-1) {
+                    classStr = classStr + classNumList.get(i) + ", ";
+                } else {
+                    classStr = classStr + classNumList.get(i);
+                }
+            }
+            return super.introduce() + " I am a Teacher. I teach Class " + classStr + ".";
         } else {
             return super.introduce() + " I am a Teacher. I teach No Class.";
         }
@@ -54,7 +62,7 @@ public class Teacher extends Person{
         Iterator it = this.classes.iterator();
         while(it.hasNext()) {
             Klass obj = (Klass) it.next();
-            if(obj.isIn(student) == true) {
+            if(obj.isIn(student)) {
                 return true;
             }
         }

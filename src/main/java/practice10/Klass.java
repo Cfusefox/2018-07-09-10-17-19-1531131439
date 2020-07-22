@@ -45,7 +45,7 @@ public class Klass {
         this.memberList.add(student);
     }
     public boolean isIn(Student student) {
-        if(this.memberList.indexOf(student) >= 0) {
+        if(this.number == student.getKlass().getNumber()) {
             return true;
         }
         return false;
