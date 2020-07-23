@@ -8,7 +8,7 @@ public class Klass {
     private int number;
     private Student leader;
     private List<Student> memberList;
-    private List<joinListener> teacherList;
+    private List<joinOrAssignListener> teacherList;
 
     public Klass(int number) {
         this.number = number;

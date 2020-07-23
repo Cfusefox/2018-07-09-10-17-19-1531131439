@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Teacher extends Person implements joinListener{
+public class Teacher extends Person implements joinOrAssignListener{
     private List<Klass> classes = new ArrayList<>();
     private List<Integer> classNumList = new ArrayList<>();
     private List<String> memberList = new ArrayList<>();
